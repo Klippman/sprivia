@@ -1,0 +1,10 @@
+<div class="background">
+    <h1><strong><%= @user.name %></strong></h1>
+    <h3><em><%= "Nickname: " + @user.nickname %></em></h3>
+
+
+
+    <%= button_to 'Log Out', '/', {method: :get}%>
+    <%= button_to 'Sprivia', sprivia_path, {method: :get}%>
+    <%= link_to 'Edit Info', edit_user_path%>
+</div>

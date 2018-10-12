@@ -1,0 +1,18 @@
+<body>
+    <div class="background">
+        <h1><%= "SPRIVIA" %></h1>
+        <div id="flex_container">
+            <h1 id="questions">Start the Game!</h1>
+            <div id="answerSelections">
+                <!-- answer options will appear -->
+            </div>
+            <div id="startGame" onclick="startGame()">
+                <h3>New Question</h3>   
+            </div>
+        </div>  
+        
+        
+        <%= button_to 'Log Out', '/', {method: :get}%>
+        <%= link_to 'Profile', @user%>
+    </div>
+</body>

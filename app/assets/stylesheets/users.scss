@@ -1,0 +1,91 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// eliminates all differences in padding and margin across browsers
+*{
+margin: 0;
+padding: 0;
+}
+ 
+// User home page (index.html)
+.index {
+    background-image: url('/images/sports2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-color: #048090;
+}
+
+// Nav menu users views
+
+.background {
+    background-color: #048090;
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    top: 40%;
+    position: fixed;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    // background-color: #f1f1f1;
+}
+
+// li {
+//     border: 1px solid black;
+// }
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul:hover {
+    background-color: #048090;
+}
+
+li:hover {
+    border: none;
+}
+
+li a:hover {
+    background-color: #F75C03;
+    color: white;
+    border-radius: 25px;
+}
+
+// create user page (/users/new.html.erb)
+
+#create_user {
+    text-align: center;
+}
+
+.field {
+    border: 2px solid #F75C03;
+    border-radius: 15px;
+    background-color: #C4E7D4;
+    text-align: center;
+    height: 15px;
+    font-size: medium;
+}
+
+.label {
+    font-family: sans-serif;
+}
+
+// edit user page (/users/edit.html.erb)
+
+#edit_user {
+    text-align: center;
+}
