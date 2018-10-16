@@ -151,6 +151,16 @@ li a:hover {
     text-transform: uppercase;
 }
 
+#question_canvas {
+    height: 400px;
+    width: 700px;
+    background-color: #F75C03;
+    opacity: .5;
+    margin-left: 25%;
+    margin-top: 15%;
+    border-radius: 15px;
+}
+
 #sprivia_game:hover {
     background-color: #048090;
 }
@@ -159,6 +169,11 @@ li a:hover {
     background-color: #F75C03;
     color: white;
     border-radius: 25px;
+}
+
+#start_game {
+    position: relative;
+    z-index: 3;
 }
 
 // Profile page (/users/show.html.erb)
