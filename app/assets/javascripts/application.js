@@ -65,19 +65,19 @@ $(document).ready(function () {
         answers.splice(randomIdx, 0, triviaQuestions[currentQuestionIndex].correct_answer)
         // Displaying answer selections
         for (let i = 0; i < answers.length; i++){
-            $("#flex_container2").append("<h3> <input type='radio' class='answerSelections' value=" + answers[i] +">" + answers[i] + "</h3>")
+            $("#flex_container2").append("<h3> <input type='radio' class='answerSelections' value=\""+answers[i]+"\">" + answers[i] + "</h3>")
         };
-
+        // Checking for correct/incorrect answer
         for (let x = 0; x < answerSelectionsElement.length; x++) {
             answerSelectionsElement[x].addEventListener('click', function(){
                 if(answerSelectionsElement[x].value == triviaQuestions[currentQuestionIndex-1].correct_answer){
                     alert("Correct!");
                 }else{
-                    alert("WRONG!");
+                    alert("WRONG! The answer is: " + triviaQuestions[currentQuestionIndex-1].correct_answer );
                 }
+                nextQuestion();
             })
         }
-
         currentQuestionIndex++;
 
 
