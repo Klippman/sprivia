@@ -1,11 +1,12 @@
 <div id="background_sessions">  
 
-    <nav id="nav_menu">
+    <nav id="nav_menu_sess">
         <ul id="sess_login">
-            <li class="sessions"><a href="/users">HOME</a></li>
+            <li class="sessions_new"><a href="/users">HOME</a></li>
         </ul>
     </nav>
-
+    <h1 id="create_acct">ENTER CREDENTIALS!</h1>
+    <br>
     <div id="login">
         <%= form_tag(sign_in_path, method: "post") do %>
         <%= label_tag(:email) %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_151209) do
+ActiveRecord::Schema.define(version: 2018_10_12_184832) do
 
   create_table "stats", force: :cascade do |t|
     t.integer "points"
@@ -19,7 +19,14 @@ ActiveRecord::Schema.define(version: 2018_10_10_151209) do
     t.datetime "updated_at", null: false
   end
 
-# Could not dump table "users" because of following StandardError
-#   Unknown type 'digest' for column 'password_digest'
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "nickname"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password_digest"
+  end
 
 end

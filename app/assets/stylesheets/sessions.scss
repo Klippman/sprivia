@@ -10,7 +10,17 @@
     height: 100vh;
 }
 
-#nav_menu {
+#create_acct {
+    text-align: center;
+    text-shadow: 1px 2px 2px #048090;
+}
+
+
+#login {
+    text-align: center;
+}
+
+#nav_menu_sess {
     top: 45%;
     position: fixed;
 }
@@ -20,11 +30,11 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 100px;
+    width: 110px;
     // background-color: #f1f1f1;
 }
 
-.sessions a {
+.sessions_new a {
     display: block;
     color: #000;
     padding: 8px 16px;
@@ -35,7 +45,7 @@
     background-color: #F75C03;
 }
 
-.sessions a:hover {
+.sessions_new a:hover {
     background-color: #048090;
     color: white;
     border-radius: 25px;

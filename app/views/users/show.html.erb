@@ -3,8 +3,11 @@
     <h3><em><%= "Nickname: " + @user.nickname %></em></h3>
 
 
-
-    <%= button_to 'Log Out', '/', {method: :get}%>
-    <%= button_to 'Sprivia', sprivia_path, {method: :get}%>
-    <%= link_to 'Edit Info', edit_user_path%>
+    <nav id="profile_nav">
+        <div id="profile_menu">
+            <%= link_to 'Log Out', '/', {method: :get, class: 'link'}%>
+            <%= link_to 'Sprivia', sprivia_path, {method: :get, class: 'link'}%>
+            <%= link_to 'Edit Info', edit_user_path, {class: 'link'}%>
+        </div>
+    </nav>
 </div>

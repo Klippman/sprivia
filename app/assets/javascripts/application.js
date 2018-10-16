@@ -17,58 +17,80 @@
 //= require jquery
 //= require jquery_ujs
 
-let correctAn;
-let incorrectAn;
+// Game functionality
+
 let correct = 0; // keeping track of score
 let incorrect = 0; // keeping track of score
 let questionQueue = [];
+let triviaQuestions = [];
 let answerSelectionsElement;
 let questionsElement;
-let shuffle = puzzles[Math.floor(Math.random() * puzzles.length)];
+let currentQuestionIndex = 0;
+let currentQuestion;
 
-// let attributes = {
-//     "type": {
-//         "boolean": true,
-//         "multiple": true
-//     },
-//     "difficulty": {
-//         "easy": false,
-//         "medium": true,
-//         "hard": false,
-//     },
-//     "categories": {}
-// };
 
-window.onload =  function(){
-    answerSelectionsElement = document.getElementById('answerSelections');
-    questionElement = document.getElementById('questions');
+window.onload = function () {
+    answerSelectionsElement = document.getElementsByClassName('answerSelections');
+    questionsElement = document.getElementsByClassName('questions');
 }
 // calling trivia API for questions
-$(document).ready(function(){
-    const Url ='https://opentdb.com/api.php?amount=49&category=21'
+$(document).ready(function () {
+    const Url = 'https://opentdb.com/api.php?amount=49&category=21'
     $.ajax({
         url: Url,
         type: "GET",
-        success: function(response){
-            "<div id='flex_container'>"
-            var trivia = response.results;
-            console.log(trivia);
+        success: function (response) {
+            triviaQuestions = response.results;
+            showNextQuestion();
         }
     })
-})
 
-// start game
-document.getElementById('startGame').onclick = startGame;
+    // start game
+    document.getElementById('start_game').onclick = nextQuestion;
 
-
-
-function startGame() {
-    answerSelectionsElement.innerHTML = "";
-    questionsElement.innerHTML = "Retrieving...";
-    if (questionQueue.length == 0) {
-        retrieveQuestions();
-    } else {
-        showQuestion();
+    function nextQuestion() {
+        $("#flex_container2").empty();
+        showNextQuestion();
     }
-}
+
+
+    function showNextQuestion() {
+        // Displaying questions to the screen
+        $("#flex_container").html("<h2 class='questions'>" +
+            triviaQuestions[currentQuestionIndex].question + "</h2>")
+
+        let answers = triviaQuestions[currentQuestionIndex].incorrect_answers
+        let randomIdx = Math.floor(Math.random() * answers.length - 1)
+ 
+        answers.splice(randomIdx, 0, triviaQuestions[currentQuestionIndex].correct_answer)
+        // Displaying answer selections
+        for (let i = 0; i < answers.length; i++){
+            $("#flex_container2").append("<h3> <input type='radio' class='answerSelections' value=" + answers[i] +">" + answers[i] + "</h3>")
+        };
+
+        for (let x = 0; x < answerSelectionsElement.length; x++) {
+            answerSelectionsElement[x].addEventListener('click', function(){
+                if(answerSelectionsElement[x].value == triviaQuestions[currentQuestionIndex-1].correct_answer){
+                    alert("Correct!");
+                }else{
+                    alert("WRONG!");
+                }
+            })
+        }
+
+        currentQuestionIndex++;
+
+
+        //     let random = Math.floor(Math.random() * questionQueue.length);
+        //     let randomized = questionQueue[random];
+        //     currentQuestion = randomized;
+        //     let selections = randomized.incorrect_answers;
+        //     selections.splice(Math.floor(Math.random() * selections.length), 0 , randomized.correct_answer)
+
+        //     questionElement.innerHTML = q.question;
+
+    }
+
+
+})
 

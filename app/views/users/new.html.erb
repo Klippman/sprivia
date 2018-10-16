@@ -1,8 +1,13 @@
 <div class="background">
-    <h1>Create an account!</h1>
+    <h1 id="create">CREATE AN ACCOUNT!</h1>
+    <br>
+    <nav id="nav_menu_new">
+        <ul id="new_user_1">
+            <li class="sessions"><a href="/users">HOME</a></li>
+        </ul>
+    </nav>
     <div id="create_user">
         <%= render 'form', user: @user %>
     </div>
-    <%= button_to 'Home Page', '/', {method: :get}%>
 </div>
 
