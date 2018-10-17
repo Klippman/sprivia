@@ -23,6 +23,20 @@
 
 #login {
     text-align: center;
+
+    input[type=text], input[type=password] {
+        border: 2px solid #F75C03;
+        border-radius: 15px;
+        background-color: #C4E7D4;
+        text-align: center;
+        height: 15px;
+        font-size: medium;
+        font-family: sans-serif;
+    }
+
+    label[for=email], label[for=password] {
+        font-family: sans-serif;
+    }
 }
 
 #login_canvas {
