@@ -6,8 +6,17 @@
             <li class="sessions"><a href="/users">HOME</a></li>
         </ul>
     </nav>
-    <div id="create_user">
-        <%= render 'form', user: @user %>
+    <div id="parent_create_user">
+        <div id="create_user">
+            <%= render 'form', user: @user %>
+        </div>
+    </div>
+    <div id="parent_image_div">
+        <div id="image_div">
+            <img id="hockey" src="/images/hockey.png">
+            <img id="basketball" src="/images/basketball.png">
+            <img id="woman" src="/images/woman.png">
+        </div>
     </div>
 </div>
 

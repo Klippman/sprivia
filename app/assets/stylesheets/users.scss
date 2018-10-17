@@ -62,6 +62,15 @@ li a:hover {
 
 // create user page (/users/new.html.erb)
 
+#image_div {
+    margin: auto;
+}
+
+#parent_image_div {
+    display: flex;
+    margin-top: 10%;
+}
+
 #create_user {
     text-align: center;
 }
@@ -98,6 +107,10 @@ li a:hover {
     // background-color: #f1f1f1;
 }
 
+#parent_create_user {
+    margin-top: 5%;
+}
+
 .sessions a {
     display: block;
     color: #000;
@@ -115,31 +128,9 @@ li a:hover {
     border-radius: 25px;
 }
 
-// edit user page (/users/edit.html.erb)
-
-#edit_user {
-    text-align: center;
-}
 
 // Sprivia page (/users/sprivia.html.erb)
-    // images on page
-#hockey {
-    height: 300px;
-    width: 300px;
-    position: relative;
-}
 
-#basketball {
-    height: 400px;
-    width: 400px;
-    position: relative;
-}
-
-#woman {
-    height: 400px;
-    width: 400px;
-    position: relative;
-}
 
 #flex_container {
     text-align: center;
@@ -238,6 +229,11 @@ li a:hover {
 
 // Edit page (/users/edit.html.erb)
 
+#edit_user {
+    text-align: center;
+    margin-top: 5%;
+}
+
 #edit_nav {
     top: 45%;
     position: fixed;
@@ -267,6 +263,17 @@ li a:hover {
     background-color: #F75C03;
     color: white;
     border-radius: 25px;
+}
+
+#parent_anchor_man {
+    display: flex;
+}
+
+#anchor_man {
+    margin: auto;
+    margin-top: 15%;
+    height: 350px;
+    width: 500px;
 }
 
 #update_info {

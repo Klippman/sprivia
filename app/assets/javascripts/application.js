@@ -28,13 +28,6 @@ let questionsElement;
 let currentQuestionIndex = 0;
 let currentQuestion;
 
-// Animation on /users/index.html.erb page
-
-// document.getElementById('.index').onload = graphicDelay;
-
-// function graphicDelay() {
-    
-// }
 
 
 window.onload = function () {
