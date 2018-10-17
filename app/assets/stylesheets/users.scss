@@ -122,12 +122,32 @@ li a:hover {
 }
 
 // Sprivia page (/users/sprivia.html.erb)
+    // images on page
+#hockey {
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+
+#basketball {
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+#woman {
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
 #flex_container {
     text-align: center;
 }
 
 #flex_container2 {
     text-align: center;
+    margin-top: 10%;
 }
 
 #triv_game_nav {
@@ -154,11 +174,12 @@ li a:hover {
 #question_canvas {
     height: 400px;
     width: 700px;
-    background-color: #F75C03;
+    background-color: rgb(255, 255, 0);
     opacity: .5;
     margin-left: 25%;
     margin-top: 15%;
     border-radius: 15px;
+    border: 10px double black;
 }
 
 #sprivia_game:hover {
@@ -174,6 +195,12 @@ li a:hover {
 #start_game {
     position: relative;
     z-index: 3;
+}
+
+#title {
+    text-align: center;
+    font-size: xx-large;
+    font-family: cursive;
 }
 
 // Profile page (/users/show.html.erb)

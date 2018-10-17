@@ -1,6 +1,10 @@
 <body>
     <div class="background">
-        <h1><%= "SPRIVIA" %></h1>
+        <h1 id="title"><%= "SPRIVIA" %></h1>
+            <!-- <img id="hockey" src="/images/hockey.png">
+            <img id="basketball" src="/images/basketball.png">
+            <img id="woman" src="/images/woman.png"> -->
+        
             <div id="question_canvas">
                 <div id="flex_container">
                     <h1 class="questions">Start the Game!</h1>
@@ -12,15 +16,15 @@
                     </form>
                 </div>
             </div>
-        
+            
         <nav id="triv_game_nav">
             <div id="sprivia_game">
                 <%= link_to 'Log Out', '/', {method: :get, class: 'link'}%>
                 <%= link_to 'Profile', @user, {class: 'link'}%>
+                <button id="start_game" onClick="nextQestion()">
+                    <h3>Next Question</h3>   
+                </button>
             </div>
         </nav>
-        <button id="start_game" onClick="nextQestion()">
-            <h3>Next Question</h3>   
-        </button>
     </div>
 </body>

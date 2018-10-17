@@ -28,6 +28,14 @@ let questionsElement;
 let currentQuestionIndex = 0;
 let currentQuestion;
 
+// Animation on /users/index.html.erb page
+
+// document.getElementById('.index').onload = graphicDelay;
+
+// function graphicDelay() {
+    
+// }
+
 
 window.onload = function () {
     answerSelectionsElement = document.getElementsByClassName('answerSelections');
@@ -56,8 +64,8 @@ $(document).ready(function () {
 
     function showNextQuestion() {
         // Displaying questions to the screen
-        $("#flex_container").html("<h2 class='questions'>" +
-            triviaQuestions[currentQuestionIndex].question + "</h2>")
+        $("#flex_container").html("<h1 class='questions'>" +
+            triviaQuestions[currentQuestionIndex].question + "</h1>")
 
         let answers = triviaQuestions[currentQuestionIndex].incorrect_answers
         let randomIdx = Math.floor(Math.random() * answers.length - 1)
@@ -65,7 +73,7 @@ $(document).ready(function () {
         answers.splice(randomIdx, 0, triviaQuestions[currentQuestionIndex].correct_answer)
         // Displaying answer selections
         for (let i = 0; i < answers.length; i++){
-            $("#flex_container2").append("<h3> <input type='radio' class='answerSelections' value=\""+answers[i]+"\">" + " " + answers[i] + "</h3>")
+            $("#flex_container2").append("<h2> <input type='radio' class='answerSelections' value=\""+answers[i]+"\">" + " " + answers[i] + "</h2>")
         };
         // Checking for correct/incorrect answer
         for (let x = 0; x < answerSelectionsElement.length; x++) {
@@ -79,18 +87,10 @@ $(document).ready(function () {
             })
         }
         currentQuestionIndex++;
-
-
-        //     let random = Math.floor(Math.random() * questionQueue.length);
-        //     let randomized = questionQueue[random];
-        //     currentQuestion = randomized;
-        //     let selections = randomized.incorrect_answers;
-        //     selections.splice(Math.floor(Math.random() * selections.length), 0 , randomized.correct_answer)
-
-        //     questionElement.innerHTML = q.question;
-
     }
 
 
 })
+
+
 
