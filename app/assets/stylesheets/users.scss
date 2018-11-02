@@ -18,6 +18,7 @@ padding: 0;
     background-color: #048090;
 }
 
+
 // Nav menu users views
 
 .background {
@@ -130,6 +131,11 @@ li a:hover {
 
 
 // Sprivia page (/users/sprivia.html.erb)
+
+button {
+    background-color: yellow;
+    border-radius: 10%;
+}
 
 
 #flex_container {
