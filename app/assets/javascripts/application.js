@@ -73,8 +73,10 @@ $(document).ready(function () {
             answerSelectionsElement[x].addEventListener('click', function(){
                 if(answerSelectionsElement[x].value == triviaQuestions[currentQuestionIndex-1].correct_answer){
                     alert("Correct!");
+                    correct++;
                 }else{
                     alert("WRONG! The answer is: " + triviaQuestions[currentQuestionIndex-1].correct_answer );
+                    incorrect++;
                 }
                 nextQuestion();
             })
