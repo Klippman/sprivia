@@ -1,7 +1,6 @@
-<p>Yo</p>
 <div id="all_posts">
     <% @posts.reverse.each do |post| %>
     <%= link_to(post.entry, post) %>
-    <p>Created By <%= @post.user.name %></p> <!-- Cannot get post.user.name to work-->
+    <p>Created By <%= post.user_id %></p> <!-- Cannot get post.user.name to work-->
     <% end %>
 </div>
