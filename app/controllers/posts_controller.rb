@@ -4,28 +4,28 @@ class PostsController < ApplicationController
         @posts = Post.all
     end
 
+    def show
+        @post = Post.find(params[:id])
+    end
+
     def new
         @post = Post.new
     end
 
-    def show
+    def edit
         @post = Post.find(params[:id])
     end
 
     def create
         @post = Post.create(post_params)
         @post.user_id = session[:user_id]
-        if @post.save(post_params)
+        if @post.save
             flash[:notice] = "Post created!"
-            redirect_to '/posts'
+            redirect_to posts_path
         else
             flash[:error] = "Post not created!"
             render :new
         end
-    end
-
-    def edit
-        @post = Post.find(params[:id])
     end
 
     def update

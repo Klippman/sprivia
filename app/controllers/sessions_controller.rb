@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
+    @user = User.find_by(email: params[:email])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
       flash[:notice] = "Logged in!"
-      redirect_to user, notice: "Logged in!"
+      redirect_to @user, notice: "Logged in!"
     else
       flash[:notice] = "Login Failed"
       redirect_to '/sessions/new'

@@ -3,19 +3,27 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
     @user = User.new
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
   def create
     @user = User.create(user_params)
-            if @user.save
-            flash[:notice] = 'Successfully Created!'
-            redirect_to '/sign-in'
-            else
-            flash[:notice] = 'Email Already Exists!'
-            render :new 
-        end
+        if @user.save
+        flash[:notice] = 'Successfully Created!'
+        redirect_to '/sign-in'
+        else
+        flash[:notice] = 'Email Already Exists!'
+        render :new 
+      end
   end
 
   def update
@@ -24,14 +32,6 @@ class UsersController < ApplicationController
     flash[:notice] = "Info Updated!"
     redirect_to current_user
   end 
-
-  def edit
-    @user = User.find(params[:id])
-  end
-
-  def show
-    @user = User.find(params[:id])
-  end
 
   def sprivia
     @user = current_user

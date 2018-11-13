@@ -1,6 +1,10 @@
-<div id="all_posts">
-    <% @posts.reverse.each do |post| %>
-    <%= link_to(post.entry, post) %>
-    <p>Created By <%= post.user_id %></p> <!-- Cannot get post.user.name to work-->
-    <% end %>
-</div>
+<%= form_for @post do |f| %>
+    <p>
+        <%= f.label :entry %>
+        <%= f.text_area :entry, class: "text-area" %>
+    </p>
+    
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
