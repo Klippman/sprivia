@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'users#index'
 
   get 'users/index'
-  get 'comments/index'
+  get '/comments/new' => 'comments#new'
   get 'stats/index'
   get 'stats/show'
   get '/sprivia' => 'users#sprivia'
@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   get '/sign-out' => 'sessions#destroy'
   post '/sign-in' => 'sessions#create'
 
-  get 'posts/show' => 'posts#show'
-  post '/posts' => 'posts#new'
+  get '/posts/show' => 'posts#show'
+  post '/posts/create' => 'posts#new'
 
   resources :users
   resources :posts

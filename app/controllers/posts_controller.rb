@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
     def index
         @posts = Post.all
+        @posts = Post.includes(:comments).order("created_at DESC").limit(5)
     end
 
     def show

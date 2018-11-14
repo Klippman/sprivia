@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
           redirect_to "/posts/#{params[:post_id]}"
         else
           flash[:error] = "Error creating comment."
-          render '/'
+          redirect_to comments_new_path
         end
     end
 
