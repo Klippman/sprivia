@@ -1,16 +1,18 @@
-<div id="blog-posts">
-  <h1>Created Posts</h1>
-  <p>Click on post to view or add comments</p>
+<body id="posts">
+    <div id="blog-posts">
+        <h1>Created Posts</h1>
+        <p>Click on post to view or add comments</p>
 
-    <p>
-      <%= link_to('Create Post', new_post_path)%>
-    </p>
-</div>
-<div id='posts-index'>
-    <% @posts.reverse.each do |post| %>
-    <li class="all-posts">
-    <p>Blog Post: <%= link_to(post.entry, post) %> </p>
-    <p>By: <%= post.user.name %>  </p>
-    </li>
-  <% end %>
-</div>
+        <p>
+        <%= link_to('Create Post', new_post_path)%>
+        </p>
+    </div>
+    <div id='posts-index'>
+        <% @posts.reverse.each do |post| %>
+        <li class="all-posts">
+        <p>Blog Post: <%= link_to(post.entry, post) %> </p>
+        <p>By: <%= post.user.name %>  </p>
+        </li>
+    <% end %>
+    </div>
+</body>

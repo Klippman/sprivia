@@ -1,4 +1,9 @@
-/* posts#show */
+/* /posts/show.html.erb */
+
+#post_show_page {
+    background: #048090;
+    height: 100%;
+}
 
 #post_nav {
     top: 45%;
@@ -11,3 +16,23 @@
     margin: 0;
     width: 153px;
 }
+
+/* /posts/new.html.erb */
+
+#post_new_page {
+    background: #048090;
+    height: 100%;
+}
+
+
+form p {
+    text-align: center;
+}
+
+/* /posts/index.html.erb */
+
+#posts {
+    background: #048090;
+    height: 100%;
+}
+

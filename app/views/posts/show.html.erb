@@ -1,16 +1,17 @@
+<body id="post_show_page">
+    <p> Post: <%= @post.entry %></p>
+    <p> Posted by: <%= @post.user.name %></p>
 
-<p> Post: <%= @post.entry %></p>
-<p> Posted by: <%= @post.user.name %></p>
+    <% @post.comments.each do |c| %>
+    <p> Comments: <%= c.body %></p>
+    <% end %>
 
-<% @post.comments.each do |c| %>
-<p> Comments: <%= c.body %></p>
-<% end %>
-
-<nav id="post_nav">
-    <div id="post_links">
-        <%= link_to("Edit Post", edit_post_path(@post), {class: 'link'}) %>
-        <%= link_to("Delete Post", @post, {method: 'delete', class: 'link'}) %>
-        <%= link_to("Add Comment", new_comment_path(post_id: @post.id), {class: 'link'})%>
-        <%= link_to("Profile", user_path, {method: :get, class: 'link'})%>
-    </div>
-</nav>
+    <nav id="post_nav">
+        <div id="post_links">
+            <%= link_to("Edit Post", edit_post_path(@post), {class: 'link'}) %>
+            <%= link_to("Delete Post", @post, {method: 'delete', class: 'link'}) %>
+            <%= link_to("Add Comment", new_comment_path(post_id: @post.id), {class: 'link'})%>
+            <%= link_to("Profile", user_path, {method: :get, class: 'link'})%>
+        </div>
+    </nav>
+</body>

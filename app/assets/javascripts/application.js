@@ -57,8 +57,8 @@ $(document).ready(function () {
 
     function showNextQuestion() {
         // Displaying questions to the screen
-        $("#flex_container").html("<h1 class='questions'>" +
-            triviaQuestions[currentQuestionIndex].question + "</h1>")
+        $("#flex_container").html("<h2 class='questions'>" +
+            triviaQuestions[currentQuestionIndex].question + "</h2>")
 
         let answers = triviaQuestions[currentQuestionIndex].incorrect_answers
         let randomIdx = Math.floor(Math.random() * answers.length - 1)
