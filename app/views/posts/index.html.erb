@@ -9,10 +9,11 @@
     </div>
     <div id='posts-index'>
         <% @posts.reverse.each do |post| %>
-        <li class="all-posts">
-        <p>Blog Post: <%= link_to(post.entry, post) %> </p>
-        <p>By: <%= post.user.name %>  </p>
-        </li>
-    <% end %>
+            <li class="all-posts">
+            <p>Blog Post: <%= link_to(post.entry, post) %> </p>
+            <p>By: <%= post.user.name %>  </p>
+            </li>
+        <% end %>
     </div>
+    <%= link_to 'Profile', @user, {class: 'link'}%>
 </body>
