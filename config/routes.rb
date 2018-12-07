@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'users#index'
 
   get 'users/index'
+  get 'users/show' => 'users#show'
   get '/comments/new' => 'comments#new'
   get 'stats/index'
   get 'stats/show'

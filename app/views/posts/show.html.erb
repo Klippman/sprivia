@@ -1,10 +1,14 @@
-<body id="post_show_page">
-    <p> Post: <%= @post.entry %></p>
-    <p> Posted by: <%= @post.user.name %></p>
+<body id="post_show_body">
+    <div id="post_show_div">
+        <p><h3>Post:</h3> <h4><%= @post.entry %></h4></p>
+        <p><h3>Posted by:</h3> <h4><%= @post.user.name %></h4></p>
 
-    <% @post.comments.each do |c| %>
-    <p> Comments: <%= c.body %></p>
-    <% end %>
+        <div id="comment_div">
+            <% @post.comments.each do |c| %>
+            <p><h3>Comment:</h3> <h4><%= c.body %></h4></p>
+            <% end %>
+        </div>
+    </div>
 
     <nav id="post_nav">
         <div id="post_links">

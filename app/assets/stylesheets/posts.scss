@@ -1,8 +1,44 @@
 /* /posts/show.html.erb */
 
-#post_show_page {
+#comment_div{
+    text-align: center;
+
+    h3 {
+        font-family: 'Luckiest Guy', cursive;
+        margin-top: 5px;
+    }
+
+    h4 {
+        color:#F75C03;
+        font-family: 'Luckiest Guy', cursive;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+
+    p {
+        border: 1px ridge black;
+        margin-top: 5px;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+}
+
+#post_show_body {
     background: #048090;
-    height: 100%;
+    height: 100vh;
+}
+
+#post_show_div {
+    text-align: center;
+
+    h3 {
+        font-family: 'Luckiest Guy', cursive;
+    }
+
+    h4 {
+        color:#F75C03;
+        font-family: 'Luckiest Guy', cursive;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
 }
 
 #post_nav {
@@ -46,5 +82,11 @@ textarea {
 #posts {
     background: #048090;
     height: 100%;
+}
+
+/* /posts/edit.html.erb */
+
+#posts_edit_div {
+    background: #048090;
 }
 
