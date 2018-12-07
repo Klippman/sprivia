@@ -19,6 +19,10 @@
 
 /* /posts/new.html.erb */
 
+#new_post {
+    vertical-align: middle;
+}
+
 #post_new_page {
     background: #048090;
     height: 100%;
@@ -27,6 +31,14 @@
 
 form p {
     text-align: center;
+}
+
+#post_form_parent {
+    height: 100vh;
+}
+
+textarea {
+    background: #F75C03;
 }
 
 /* /posts/index.html.erb */
