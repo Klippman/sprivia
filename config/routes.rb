@@ -2,17 +2,17 @@ Rails.application.routes.draw do
   root 'users#index'
 
   get 'users/index'
-  get 'users/show' => 'users#show'
-  get '/comments/new' => 'comments#new'
+  get 'users/show', :to => 'users#show'
+  get '/comments/new', :to => 'comments#new'
   get 'stats/index'
   get 'stats/show'
-  get '/sprivia' => 'users#sprivia'
-  get '/sign-in' => 'sessions#new'
-  get '/sign-out' => 'sessions#destroy'
-  post '/sign-in' => 'sessions#create'
+  get '/sprivia', :to => 'users#sprivia'
+  get '/sign-in', :to => 'sessions#new'
+  get '/sign-out', :to => 'sessions#destroy'
+  post '/sign-in', :to => 'sessions#create'
 
-  get '/posts/show' => 'posts#show'
-  post '/posts/create' => 'posts#new'
+  get '/posts/show', :to => 'posts#show'
+  post '/posts/create', :to => 'posts#new'
 
   resources :users
   resources :posts

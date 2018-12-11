@@ -8,10 +8,14 @@ label[for="comment_body"] {
     font-weight: bolder;
 }
 
-textarea {
-    width: 500px;
-    height: 75px;
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 20px;
-
+.new_comment {
+    
+    textarea {
+        width: 500px;
+        height: 75px;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 20px;
+        background: #F75C03;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    }
 }

@@ -57,6 +57,15 @@
 
 #new_post {
     vertical-align: middle;
+
+    textarea {
+        width: 500px;
+        height: 75px;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 20px;
+        background: #F75C03;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    }
 }
 
 #post_new_page {
@@ -73,8 +82,16 @@ form p {
     height: 100vh;
 }
 
-textarea {
-    background: #F75C03;
+.edit_post {
+
+    textarea {
+        width: 500px;
+        height: 75px;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 20px;
+        background: #F75C03;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    }
 }
 
 /* /posts/index.html.erb */
@@ -82,6 +99,11 @@ textarea {
 #posts {
     background: #048090;
     height: 100%;
+}
+
+#blog-posts {
+
+    
 }
 
 /* /posts/edit.html.erb */
