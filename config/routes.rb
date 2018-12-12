@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
   root 'users#index'
 
-  get 'users/index'
-  get 'users/show', :to => 'users#show'
   get '/comments/new', :to => 'comments#new'
-  get 'stats/index'
-  get 'stats/show'
+  get '/stats/index', :to => 'stats#index'
+  get '/stats/show', :to => 'stats#show'
   get '/sprivia', :to => 'users#sprivia'
   get '/sign-in', :to => 'sessions#new'
   get '/sign-out', :to => 'sessions#destroy'

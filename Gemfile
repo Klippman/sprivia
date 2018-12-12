@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+
+gem 'activerecord-reset-pk-sequence'
 gem 'jquery-rails'
 gem 'loofah', '>= 2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
