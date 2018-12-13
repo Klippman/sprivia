@@ -55,60 +55,93 @@
 
 /* /posts/new.html.erb */
 
+form p {
+    text-align: center;
+}
+
+.link {
+    top: 40%;
+    position: fixed;
+}
+
 #new_post {
     vertical-align: middle;
 
-    textarea {
-        width: 500px;
-        height: 75px;
+    #post_entry {
+        background: #F75C03;
+        border: 3px solid #cccccc;
         font-family: 'Luckiest Guy', cursive;
         font-size: 20px;
-        background: #F75C03;
+        height: 75px;
         text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+        width: 500px;
+        outline: none;
+    }
+
+    #post_entry:hover {
+        background: lightsalmon;
+        border: 3px solid black;
+        transition: background-color .8s;
+        transition: border-color .8s;
+    }
+
+    #post_entry:focus {
+        background: blue;
     }
 }
 
 #post_new_page {
     background: #048090;
-    height: 100%;
-}
-
-
-form p {
-    text-align: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 #post_form_parent {
-    height: 100vh;
-}
-
-.edit_post {
-
-    textarea {
-        width: 500px;
-        height: 75px;
-        font-family: 'Luckiest Guy', cursive;
-        font-size: 20px;
-        background: #F75C03;
-        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-    }
+    height: 150px;
 }
 
 /* /posts/index.html.erb */
-
-#posts {
-    background: #048090;
-    height: 100%;
-}
 
 #blog-posts {
 
     
 }
 
+#posts {
+    background: #048090;
+    height: 100%;
+}
+
 /* /posts/edit.html.erb */
+
+.edit_post {
+
+    #post_entry {
+        background: #F75C03;
+        border: 3px solid #cccccc;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 20px;
+        height: 75px;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+        width: 500px;
+        outline: none;
+    }
+
+    #post_entry:hover {
+        background: lightsalmon;
+        border: 3px solid black;
+        transition: background-color .8s;
+        transition: border-color .8s;
+    }
+
+    #post_entry:focus {
+        background: blue;
+    }
+}
 
 #posts_edit_div {
     background: #048090;
 }
+
+
 
