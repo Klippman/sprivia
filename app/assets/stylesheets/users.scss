@@ -28,7 +28,7 @@ padding: 0;
 }
 
 nav {
-    top: 40%;
+    top: 45%;
     position: fixed;
 }
 
@@ -96,7 +96,6 @@ li a:hover {
 
 #nav_menu_new {
     top: 45%;
-    position: fixed;
 }
 
 
@@ -105,7 +104,6 @@ li a:hover {
     padding: 0;
     margin: 0;
     width: 110px;
-    // background-color: #f1f1f1;
 }
 
 #parent_create_user {
@@ -140,7 +138,6 @@ button {
     background: #048090;
     border: none;
     outline: none;
-    cursor: pointer;
     font-size: 100%;
     font-family: inherit;
 }
@@ -180,10 +177,10 @@ button {
 #question_canvas {
     height: 450px;
     width: 700px;
-    background-color: rgb(255, 255, 0);
+    background-color: #00ff00;
     opacity: .5;
     margin-left: 25%;
-    margin-top: 15%;
+    margin-top: 8%;
     border-radius: 15px;
     border: 10px double black;
 }
@@ -258,6 +255,28 @@ button {
 #edit_user {
     text-align: center;
     margin-top: 5%;
+
+    #edit_user_1 {
+
+        input[type="submit"] {
+            background: #048090;
+            border-radius: 25px;
+            border: 1px dotted #F75C03; 
+            color: #000;
+            font-family: inherit;
+            font-size: 100%;
+            outline: none;
+            padding: 3px 16px;
+            text-transform: uppercase; 
+            transition: .5s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #F75C03;
+            border-radius: 25px;
+            color: white;
+        }
+    }
 }
 
 #edit_nav {
@@ -273,16 +292,16 @@ button {
     width: 110px;
 }
 
+#edit_links:hover {
+    background-color: #048090;
+}
+
 .link {
     display: block;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
     text-transform: uppercase;
-}
-
-#edit_links:hover {
-    background-color: #048090;
 }
 
 .link:hover {
@@ -300,6 +319,8 @@ button {
     margin-top: 15%;
     height: 350px;
     width: 500px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 50%;
 }
 
 #update_info {

@@ -43,7 +43,6 @@
 
 #post_nav {
     top: 45%;
-    position: fixed;  
 }
 
 #post_links {
@@ -59,9 +58,26 @@ form p {
     text-align: center;
 }
 
+p input[type="submit"] {
+    background: #048090;
+    border: 1px dotted #F75C03;
+    border-radius: 25px;
+    color: #000;
+    font-family: inherit;
+    font-size: 100%;
+    outline: none;
+    padding: 8px 16px;
+    text-transform: uppercase; 
+}
+
+p input[type="submit"]:hover {
+    background-color: #F75C03;
+    color: white;
+    border-radius: 25px;
+}
+
 .link {
-    top: 40%;
-    position: fixed;
+    top: 45%;
 }
 
 #new_post {
@@ -80,13 +96,14 @@ form p {
 
     #post_entry:hover {
         background: lightsalmon;
-        border: 3px solid black;
+        border: 3px solid #cccccc;
         transition: background-color .8s;
         transition: border-color .8s;
     }
 
     #post_entry:focus {
-        background: blue;
+        background: gray;
+        border: 3px solid black;
     }
 }
 
@@ -118,7 +135,7 @@ form p {
 
     #post_entry {
         background: #F75C03;
-        border: 3px solid #cccccc;
+        border: 3px solid black;
         font-family: 'Luckiest Guy', cursive;
         font-size: 20px;
         height: 75px;
@@ -129,13 +146,14 @@ form p {
 
     #post_entry:hover {
         background: lightsalmon;
-        border: 3px solid black;
+        border: 3px solid #cccccc;
         transition: background-color .8s;
         transition: border-color .8s;
     }
 
     #post_entry:focus {
-        background: blue;
+        background: gray;
+        border: 3px solid black;
     }
 }
 
