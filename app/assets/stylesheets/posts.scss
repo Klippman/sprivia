@@ -54,12 +54,36 @@
 
 /* /posts/new.html.erb */
 
+#background {
+    background: #048090;
+}
+
+#canvas_div {
+    align-items: center;
+    background-color: rgba(0,168,150,0.8);
+    border-right: 10px double black;
+    border-left: 10px double black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px 10px #00ff00 inset;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    width: 700px;
+}
+
 form p {
     text-align: center;
 }
 
+#post_title {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px #00ff00;
+}
+
 p input[type="submit"] {
-    background: #048090;
+    background: rgba(0,168,150,0.8);
     border: 1px dotted #F75C03;
     border-radius: 25px;
     color: #000;
@@ -74,10 +98,27 @@ p input[type="submit"]:hover {
     background-color: #F75C03;
     color: white;
     border-radius: 25px;
+    transition: .5s;
 }
 
-.link {
+label[for="post_entry"] {
+    display: none;
+}
+
+.post_link {
+    color: #000;
+    display: block;
+    padding: 8px 16px;
+    position: fixed;
+    text-decoration: none;
+    text-transform: uppercase;
     top: 45%;
+}
+
+.post_link:hover {
+    background-color: #F75C03;
+    color: white;
+    border-radius: 25px;
 }
 
 #new_post {
@@ -108,34 +149,71 @@ p input[type="submit"]:hover {
 }
 
 #post_new_page {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;   
+}
+
+#post_form_parent {
+    height: 200px;
+}
+
+/* /posts/index.html.erb */
+
+#blog_posts_container {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+#parent_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#posts {
     background: #048090;
     height: 100vh;
     width: 100vw;
 }
 
-#post_form_parent {
-    height: 150px;
-}
+#posts_index {
 
-/* /posts/index.html.erb */
-
-#blog-posts {
-
-    
-}
-
-#posts {
-    background: #048090;
-    height: 100%;
+    li {
+        list-style-image: url('../images/arrow1.png');
+    }
 }
 
 /* /posts/edit.html.erb */
+
+#background {
+    background: #048090;
+}
+
+#canvas_div {
+    align-items: center;
+    background-color: rgba(0,168,150,0.8);
+    border-right: 10px double black;
+    border-left: 10px double black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px 10px #00ff00 inset;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    width: 700px;
+}
 
 .edit_post {
 
     #post_entry {
         background: #F75C03;
-        border: 3px solid black;
+        border: 3px solid #cccccc;
         font-family: 'Luckiest Guy', cursive;
         font-size: 20px;
         height: 75px;
@@ -157,8 +235,23 @@ p input[type="submit"]:hover {
     }
 }
 
-#posts_edit_div {
+#edit_post_title {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px #00ff00; 
+}
+
+#posts_edit_page {
+    align-items: center;
     background: #048090;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+}
+
+#post_edit_parent {
+    height: 200px;
 }
 
 

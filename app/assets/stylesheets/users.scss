@@ -33,29 +33,29 @@ nav {
 }
 
 
-ul {
+nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     width: 110px;
 }
 
-li a {
+nav li a {
     display: block;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
 }
 
-ul:hover {
+nav ul:hover {
     background-color: #048090;
 }
 
-li:hover {
+nav li:hover {
     border: none;
 }
 
-li a:hover {
+nav li a:hover {
     background-color: #F75C03;
     color: white;
     border-radius: 25px;
@@ -154,8 +154,8 @@ button {
 }
 
 #triv_game_nav {
-    top: 45%;
-    position: fixed;
+    top: 40%;
+    // position: fixed;
 }
 
 
@@ -220,7 +220,7 @@ button {
 // Profile page (/users/show.html.erb)
 
 #profile_nav {
-    top: 45%;
+    top: 40%;
     position: fixed;
 }
 
@@ -280,7 +280,7 @@ button {
 }
 
 #edit_nav {
-    top: 45%;
+    top: 40%;
     position: fixed;
 }
 

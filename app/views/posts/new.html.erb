@@ -1,8 +1,15 @@
-<body id="post_new_page">
-    <div id="post_form_parent">
-        <p>Post Your Thoughts!</p>
-        <%= render "post_form", {class: 'text_box',}%>
+<body id="background">
+    <div>
+        <%= link_to "Profile", users_path, {class: 'post_link'} %>
     </div>
-    <%= link_to("Profile", users_path, {class: 'link'})%>
+    <div id="post_new_page">
+        <div id="canvas_div">
+            <div id="post_form_parent">
+                <h1 id="post_title">POST YOUR THOUGHTS!</h1>
+                <%= render "post_form", {class: 'text_box',}%>
+            </div>
+        </div>
+    </div>
 </body>
+
 

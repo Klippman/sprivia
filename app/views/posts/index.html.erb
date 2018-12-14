@@ -1,20 +1,25 @@
 <body id="posts">
-    <div id="blog-posts">
-        <h1>Created Posts</h1>
-        <p>Click on post to view or add comments</p>
-        <p>
-            <%= link_to('Create Post', new_post_path)%>
-        </p>
-    </div>
-    <div id='posts-index'>
-        <% @posts.reverse.each do |post| %>
-            <li class="all-posts">
-                <p>Blog Post: <%= link_to(post.entry, post) %> </p>
-                <% if post.user %>
-                    <p>By: <%= post.user.name %>  </p>
-                <% end %>
-            </li>
-        <% end %>
-    </div>
     <%= link_to 'Sprivia', sprivia_path, {method: :get, class: 'link'}%>
+    <div id="parent_container">
+        <div id="blog_posts_container">
+            <div id="blog_posts">
+                <h1>Created Posts</h1>
+                <p>Click on post to view or add comments</p>
+                <p>
+                    <%= link_to('Create Post', new_post_path)%>
+                </p>
+            </div>
+            </br>
+            <div id='posts_index'>
+                <% @posts.reverse.each do |post| %>
+                    <li class="all_posts">
+                        <span>Post: <%= link_to(post.entry, post) %> </span></br>
+                        <% if post.user %>
+                            <span>By: <%= post.user.name %>  </span>
+                        <% end %>
+                    </li>
+                <% end %>
+            </div>
+        </div>
+    </div>
 </body>
