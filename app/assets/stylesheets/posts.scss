@@ -164,9 +164,7 @@ label[for="post_entry"] {
 /* /posts/index.html.erb */
 
 #blog_posts_container {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
+    width: 700px;
 }
 
 #parent_container {
@@ -179,12 +177,21 @@ label[for="post_entry"] {
     background: #048090;
     height: 100vh;
     width: 100vw;
+
+    a[class='link'] {
+        width: 100px;
+    }
 }
 
 #posts_index {
 
     li {
         list-style-image: url('../images/arrow1.png');
+    }
+
+    [class="all_posts"] {
+        border: 2px solid black;
+        margin-bottom: 5px;
     }
 }
 

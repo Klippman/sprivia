@@ -6,7 +6,9 @@
                 <h1>Created Posts</h1>
                 <p>Click on post to view or add comments</p>
                 <p>
-                    <%= link_to('Create Post', new_post_path)%>
+                    <%= link_to new_post_path do %>
+                        <%= image_tag "/images/post-img.png", alt: 'a pencil writing on paper' %>
+                    <% end %>
                 </p>
             </div>
             </br>
