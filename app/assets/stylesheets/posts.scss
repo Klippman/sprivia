@@ -198,11 +198,11 @@ label[for="post_entry"] {
 
 #posts {
     background: #048090;
-    height: 100vh;
-    width: 100vw;
 
     a[class='link'] {
         width: 100px;
+        top: 40%;
+        position: fixed;
     }
 }
 
@@ -215,6 +215,7 @@ label[for="post_entry"] {
 
     [class="all_posts"] {
         border: 12px ridge lightslategrey;
+        background-color: aquamarine;
         margin-bottom: 10px;
         word-wrap: break-word;
 
@@ -229,6 +230,14 @@ label[for="post_entry"] {
             font-family: 'Luckiest Guy', cursive;
             margin: 5px;
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+            a:link {
+                color: #F012BE;
+            }
+
+            a:visited {
+                color: #2ECC40;
+            }
         }
     }
 }
