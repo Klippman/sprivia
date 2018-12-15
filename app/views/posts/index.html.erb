@@ -15,9 +15,9 @@
             <div id='posts_index'>
                 <% @posts.reverse.each do |post| %>
                     <li class="all_posts">
-                        <span>Post: <%= link_to(post.entry, post) %> </span></br>
+                        <span><h3>Post:</h3> <h4><%= link_to(post.entry, post) %></h4> </span>
                         <% if post.user %>
-                            <span>By: <%= post.user.name %>  </span>
+                            <span><h3>By:</h3> <h4><%= post.user.name %></h4>  </span>
                         <% end %>
                     </li>
                 <% end %>

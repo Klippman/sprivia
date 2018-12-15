@@ -167,6 +167,29 @@ label[for="post_entry"] {
     width: 700px;
 }
 
+#blog_posts {
+
+    img[src="/images/post-img.png"] {
+        border-radius: 40%;
+        box-shadow: 3px 4px 10px darkslategrey;
+    }
+
+    img[src="/images/post-img.png"]:hover {
+        animation: wiggle 1s ease;
+        animation-iteration-count: 1;
+        
+        @keyframes wiggle {
+            20%  { transform: translateX(4px);  }
+            40%  { transform: translateX(-4px); }
+            60%  { transform: translateX(2px);  }
+            80%  { transform: translateX(-1px); }
+            100% { transform: translateX(0);    }
+        }
+
+
+    }
+}
+
 #parent_container {
     display: flex;
     align-items: center;
@@ -186,12 +209,27 @@ label[for="post_entry"] {
 #posts_index {
 
     li {
-        list-style-image: url('../images/arrow1.png');
+        // list-style-image: url('../images/arrow1.png');
+        list-style: none;
     }
 
     [class="all_posts"] {
-        border: 2px solid black;
-        margin-bottom: 5px;
+        border: 12px ridge lightslategrey;
+        margin-bottom: 10px;
+        word-wrap: break-word;
+
+        h3 {
+            font-family: 'Luckiest Guy', cursive;
+            margin: 5px;
+            margin-top: 5px;
+        }
+    
+        h4 {
+            color:#F75C03;
+            font-family: 'Luckiest Guy', cursive;
+            margin: 5px;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
     }
 }
 
