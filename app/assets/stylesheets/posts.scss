@@ -190,6 +190,17 @@ label[for="post_entry"] {
     }
 }
 
+#click_to_add_comment {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#create_post_heading {
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px #00ff00;
+}
+
 #parent_container {
     display: flex;
     align-items: center;
@@ -198,18 +209,17 @@ label[for="post_entry"] {
 
 #posts {
     background: #048090;
+}
 
-    a[class='link'] {
-        width: 100px;
-        top: 40%;
-        position: fixed;
-    }
+#link_to_menu {
+    width: 110px;
+    top: 40%;
+    position: fixed;
 }
 
 #posts_index {
 
     li {
-        // list-style-image: url('../images/arrow1.png');
         list-style: none;
     }
 

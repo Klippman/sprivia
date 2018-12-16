@@ -44,14 +44,21 @@
         color: white;
     }
 
-    input[type=text], input[type=password] {
+    input[required="required"] {
         border: 2px solid #F75C03;
         border-radius: 15px;
         background-color: #C4E7D4;
         font-family: sans-serif;
         font-size: medium;
         height: 22px;
+        outline: none;
         text-align: center;
+    }
+
+    input[required="required"]:focus {
+        background-color: black;
+        border: 2px solid white;
+        color: white;
     }
 
     label[for=email], label[for=password] {

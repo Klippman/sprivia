@@ -10,12 +10,12 @@ padding: 0;
  
 // User home page (index.html)
 .index {
-    background-image: url('/images/sports2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
     background-color: #048090;
+    background-image: url('/images/sports2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
 }
 
 
@@ -23,26 +23,26 @@ padding: 0;
 
 .background {
     background-color: #048090;
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
 }
 
 nav {
-    top: 45%;
     position: fixed;
+    top: 45%;
 }
 
 
 nav ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     width: 110px;
 }
 
 nav li a {
-    display: block;
     color: #000;
+    display: block;
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -57,8 +57,8 @@ nav li:hover {
 
 nav li a:hover {
     background-color: #F75C03;
-    color: white;
     border-radius: 25px;
+    color: white;
 }
 
 // create user page (/users/new.html.erb)
@@ -72,22 +72,25 @@ nav li a:hover {
     margin-top: 10%;
 }
 
-#create_user {
-    text-align: center;
-}
-
 #create {
-    text-shadow: 1px 2px 2px #C4E7D4;
+    margin-bottom: 10px;
     text-align: center;
+    text-shadow: 2px 2px 2px #00ff00;
 }
 
-.field {
-    border: 2px solid #F75C03;
+#create_user {
+    align-items: center;
+    background-color: rgba(0, 168, 150, 0.8);
+    border-right: 10px double black;
+    border-left: 10px double black;
     border-radius: 15px;
-    background-color: #C4E7D4;
+    box-shadow: 0px 0px 50px 10px #00ff00 inset;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    margin: auto;
     text-align: center;
-    height: 22px;
-    font-size: medium;
+    width: 1200px;
 }
 
 .label {
@@ -98,21 +101,54 @@ nav li a:hover {
     top: 45%;
 }
 
+#new_user {
+
+    input[required="required"] {
+        background-color: #C4E7D4;
+        border: 2px solid #F75C03;
+        border-radius: 15px;
+        font-size: medium;
+        height: 22px;
+        outline: none;
+        text-align: center;
+    }
+
+    input[required="required"]:focus {
+        background-color: black;
+        border: 2px solid white;
+        color: white;
+    }
+
+    input[type="submit"] {
+        background: rgba(0,168,150,0.8);
+        border: 1px dotted #F75C03;
+        border-radius: 25px;
+        color: #000;
+        font-family: inherit;
+        font-size: 100%;
+        outline: none;
+        padding: 3px 16px;
+        text-transform: uppercase; 
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #F75C03;
+        color: white;
+        border-radius: 25px;
+        transition: .5s;
+    }
+}
 
 #new_user_1 {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     width: 110px;
 }
 
-#parent_create_user {
-    margin-top: 5%;
-}
-
 .sessions a {
-    display: block;
     color: #000;
+    display: block;
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -123,23 +159,23 @@ nav li a:hover {
 
 .sessions a:hover {
     background-color: #F75C03;
-    color: white;
     border-radius: 25px;
+    color: white;
 }
 
 
 // Sprivia page (/users/sprivia.html.erb)
 
 button {
-    border-radius: 10%;
-    color: #000;
-    padding: 8px 16px;
-    text-transform: uppercase;
     background: #048090;
     border: none;
-    outline: none;
-    font-size: 100%;
+    border-radius: 10%;
+    color: #000;
     font-family: inherit;
+    font-size: 100%;
+    outline: none;
+    padding: 8px 16px;
+    text-transform: uppercase;
 }
 
 
@@ -148,9 +184,9 @@ button {
 }
 
 #flex_container2 {
-    text-align: left;
-    margin-top: 10%;
     margin-left: 35%;
+    margin-top: 10%;
+    text-align: left;
 }
 
 #triv_game_nav {
@@ -161,37 +197,37 @@ button {
 
 #sprivia_game {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     width: 160px;
 }
 
 .link {
-    display: block;
     color: #000;
+    display: block;
     padding: 8px 16px;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 #question_canvas {
-    height: 450px;
-    width: 700px;
     background-color: #00ff00;
-    opacity: .5;
+    border: 10px double black;
+    border-radius: 15px;
+    height: 450px;
     margin-left: 25%;
     margin-top: 8%;
-    border-radius: 15px;
-    border: 10px double black;
+    opacity: .5;
+    width: 700px; 
 }
 
 #score {
     height: 226px;
 
     span {
+        left: 10px;
         position: relative;
         top: 170px;
-        left: 10px;
     }
 }
 
@@ -201,8 +237,8 @@ button {
 
 .link:hover {
     background-color: #F75C03;
-    color: white;
     border-radius: 25px;
+    color: white;
 }
 
 #start_game {
@@ -211,30 +247,26 @@ button {
 }
 
 #title {
-    text-align: center;
-    font-size: xx-large;
     font-family: cursive;
+    font-size: xx-large;
+    text-align: center;
 }
 
 
 // Profile page (/users/show.html.erb)
 
-#profile_nav {
-    top: 40%;
-    position: fixed;
-}
-
-
 #profile_menu {
     list-style-type: none;
-    padding: 0;
     margin: 0;
-    width: 138px;
+    padding: 0;
+    position: fixed;
+    top: 40%;
+    width: 112px;
 }
 
 .link {
-    display: block;
     color: #000;
+    display: block;
     padding: 8px 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -246,20 +278,46 @@ button {
 
 .link:hover {
     background-color: #F75C03;
-    color: white;
     border-radius: 25px;
+    color: white; 
 }
 
 // Edit page (/users/edit.html.erb)
 
 #edit_user {
+    align-items: center;
+    background-color: rgba(0,168,150,0.8);
+    border-right: 10px double black;
+    border-left: 10px double black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px 10px #00ff00 inset;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    margin: auto;
     text-align: center;
-    margin-top: 5%;
+    width: 1200px;
 
     #edit_user_1 {
 
+        input[required="required"] {
+            background-color: #C4E7D4;
+            border: 2px solid #F75C03;
+            border-radius: 15px;
+            font-size: medium;
+            height: 22px;
+            outline: none;
+            text-align: center;
+        }
+
+        input[required="required"]:focus {
+            background-color: black;
+            border: 2px solid white;
+            color: white;
+        }
+
         input[type="submit"] {
-            background: #048090;
+            background: rgba(0,168,150,0.8);
             border-radius: 25px;
             border: 1px dotted #F75C03; 
             color: #000;
@@ -280,15 +338,15 @@ button {
 }
 
 #edit_nav {
-    top: 40%;
     position: fixed;
+    top: 40%;
 }
 
 
 #edit_links {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     width: 110px;
 }
 
@@ -297,8 +355,8 @@ button {
 }
 
 .link {
-    display: block;
     color: #000;
+    display: block;
     padding: 8px 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -306,8 +364,8 @@ button {
 
 .link:hover {
     background-color: #F75C03;
-    color: white;
     border-radius: 25px;
+    color: white;
 }
 
 #parent_anchor_man {
@@ -315,16 +373,18 @@ button {
 }
 
 #anchor_man {
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px black;
+    height: 350px;
     margin: auto;
     margin-top: 15%;
-    height: 350px;
     width: 500px;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 50%;
 }
 
 #update_info {
+    margin-bottom: 10px;
     text-align: center;
+    text-shadow: 2px 2px 2px #00ff00;
 }
 
 

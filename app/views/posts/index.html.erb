@@ -1,10 +1,13 @@
 <body id="posts">
-    <%= link_to 'Sprivia', sprivia_path, {method: :get, class: 'link'}%>
+    <div id="link_to_menu">
+        <%= link_to 'Sprivia', sprivia_path, {method: :get, class: 'link'}%>
+        <%= link_to 'Log Out', '/', {method: :get, class: 'link'}%>
+    </div>
     <div id="parent_container">
         <div id="blog_posts_container">
             <div id="blog_posts">
-                <h1>Created Posts</h1>
-                <p>Click on post to view or add comments</p>
+                <h1 id="create_post_heading">CREATED POSTS</h1>
+                <p id="click_to_add_comment">Click on post to view or add comments</p>
                 <p>
                     <%= link_to new_post_path do %>
                         <%= image_tag "/images/post-img.png", alt: 'a pencil writing on paper' %>

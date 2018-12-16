@@ -1,5 +1,10 @@
-<!-- background color -->
 <div class="background">
+    <nav id="edit_nav">
+        <div id="edit_links">
+            <%= link_to 'Log Out', '/', {method: :get, class: 'link'}%>
+            <%= link_to 'Profile', @user, {class: 'link'}%>
+        </div>
+    </nav>
     <h1 id="update_info">EDIT ACCOUT!</h1>
     <div id="edit_user">
         <%= render 'form', user: @user %>  
@@ -7,10 +12,4 @@
     <div id="parent_anchor_man">
         <img id="anchor_man" src="/images/Are_you_sure.gif">
     </div>
-    <nav id="edit_nav">
-        <div id="edit_links">
-            <%= link_to 'Log Out', '/', {method: :get, class: 'link'}%>
-            <%= link_to 'Profile', @user, {class: 'link'}%>
-        </div>
-    </nav>
 </div>
