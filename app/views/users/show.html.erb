@@ -1,7 +1,9 @@
 <div class="background">
         <h1><strong><%= @user.name %></strong></h1>
         <h3><em><%= "Nickname: " + @user.nickname %></em></h3>
-        
+    
+    <div id="interactive_chart"></div>
+
     <div id="profile_menu">
         <%= link_to 'Log Out', '/', {method: :get, class: 'link'}%>
         <%= link_to 'Sprivia', sprivia_path, {method: :get, class: 'link'}%>
