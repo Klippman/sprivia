@@ -30,12 +30,12 @@ let currentQuestion;
 
 
 
-window.onload = function () {
+window.onload = () => {
     answerSelectionsElement = document.getElementsByClassName('answerSelections');
     questionsElement = document.getElementsByClassName('questions');
 }
 // calling trivia API for questions
-$(document).ready(function () {
+$(document).ready( () => {
     const Url = 'https://opentdb.com/api.php?amount=49&category=21'
     $.ajax({
         url: Url,
@@ -47,22 +47,23 @@ $(document).ready(function () {
     })
 
     // start game
-    document.getElementById('start_game').onclick = nextQuestion;
 
-    function nextQuestion() {
+    nextQuestion = () => {
         $("#flex_container2").empty();
         showNextQuestion();
     }
 
+    // Skip to next question
+    document.getElementById('start_game').onclick = nextQuestion;
 
-    function showNextQuestion() {
+    showNextQuestion = () => {
         // Displaying questions to the screen
         $("#flex_container").html("<h2 class='questions'>" +
             triviaQuestions[currentQuestionIndex].question + "</h2>")
 
         let answers = triviaQuestions[currentQuestionIndex].incorrect_answers
         let randomIdx = Math.floor(Math.random() * answers.length - 1)
- 
+
         answers.splice(randomIdx, 0, triviaQuestions[currentQuestionIndex].correct_answer)
         // Displaying answer selections
         for (let i = 0; i < answers.length; i++){
@@ -70,7 +71,7 @@ $(document).ready(function () {
         };
         // Checking for correct/incorrect answer
         for (let x = 0; x < answerSelectionsElement.length; x++) {
-            answerSelectionsElement[x].addEventListener('click', function(){
+            answerSelectionsElement[x].addEventListener('click', () => {
                 if(answerSelectionsElement[x].value === triviaQuestions[currentQuestionIndex-1].correct_answer){
                     alert("Correct!");
                 } else {
@@ -82,8 +83,13 @@ $(document).ready(function () {
         currentQuestionIndex++;
     }
 
+    // Tracking correct vs incorrect answers
+    keepScore = () => {
 
+    }
 })
+
+
 
 
 
