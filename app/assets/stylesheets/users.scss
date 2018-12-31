@@ -250,6 +250,7 @@ button {
     font-family: cursive;
     font-size: xx-large;
     text-align: center;
+    text-shadow: 2px 2px 2px #00ff00;
 }
 
 
@@ -282,7 +283,7 @@ button {
     color: white; 
 }
 
-#user_name {
+#user_name_profile {
     align-items: center;
     background-color: rgba(0,168,150,0.8);
     border: 10px double black;
@@ -297,7 +298,7 @@ button {
     width: 800px;
 }
 
-#user_nickname {
+#user_nickname_profile {
     align-items: center;
     background-color: rgba(0,168,150,0.8);
     border: 10px double black;

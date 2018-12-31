@@ -25,6 +25,8 @@ let answerSelectionsElement;
 let questionsElement;
 let currentQuestionIndex = 0;
 let currentQuestion;
+let correct = 0;
+let incorrect = 0;
 
 
 
@@ -85,12 +87,12 @@ $(document).ready( () => {
     keepScore = () => {
 
         for (let y = 0; y < answerSelectionsElement.length; y++) {
-            answerSelectionsElement[y].addEventListener('click', (correct = 0, incorrect = 0) => {
+            answerSelectionsElement[y].addEventListener('click', () => {
                 if(answerSelectionsElement[y].value === triviaQuestions[currentQuestionIndex-1].correct_answer){
-                    console.log(correct);
+                    console.log('hello');
                     correct++;
                 } else {
-                    console.log(incorrect);
+                    console.log('bye');
                     incorrect++;
                 }
             })

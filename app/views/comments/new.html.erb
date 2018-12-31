@@ -1,5 +1,13 @@
-<body id="comment_body_div">   
-    <div id="parent_comment_div">
-        <%= render "comment_form"%>
+<body id="comment_body_background">
+    <div>
+        <%= link_to "Profile", users_path, {class: 'post_link'} %>
+    </div>
+    <div id="comment_parent">
+        <div id="comment_child">
+            <div id="parent_comment_div">
+                <h1 id="comment_title">POST YOUR COMMENTS!</h1>
+                <%= render "comment_form", {class: 'text_box'}%>
+            </div>
+        </div>
     </div>
 </body> 

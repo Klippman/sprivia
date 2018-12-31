@@ -1,8 +1,12 @@
 <div id="comment-form">
     <%= form_for @comment do |f| %>
-        <%= f.label :body %>
-        <%= f.text_area :body, placeholder: "Enter Text...", class: "text-area" %>
-        <%= f.hidden_field :post_id %>
-        <%= f.submit %>
+        <p>
+            <%= f.label :body %>
+            <%= f.text_area :body, placeholder: "Enter Comment...", class: "text-area" %>
+            <%= f.hidden_field :post_id %>
+        </p>
+        <p>
+            <%= f.submit %>
+        </p>
     <% end %>
 </div>

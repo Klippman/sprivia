@@ -22,12 +22,24 @@
     }
 }
 
+#post_border_box {
+    border: 12px ridge lightslategrey;
+    background-color: aquamarine;
+    margin: auto;
+    width: 700px;
+    word-wrap: break-word;
+
+    span {
+        margin-top: 5px;
+    }
+}
+
 #post_show_body {
     background: #048090;
     height: 100vh;
 }
 
-#post_show_div {
+#post_show_div_parent {
     text-align: center;
 
     h3 {
@@ -81,7 +93,7 @@ form p {
     margin-bottom: 10px;
     text-shadow: 2px 2px 2px #00ff00;
 }
-
+        // create post button
 p input[type="submit"] {
     background: rgba(0,168,150,0.8);
     border: 1px dotted #F75C03;
@@ -100,6 +112,8 @@ p input[type="submit"]:hover {
     border-radius: 25px;
     transition: .5s;
 }
+
+        // create post button end
 
 label[for="post_entry"] {
     display: none;
