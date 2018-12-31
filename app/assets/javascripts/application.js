@@ -19,8 +19,6 @@
 
 // Game functionality
 
-let correct = 0; // keeping track of score
-let incorrect = 0; // keeping track of score
 let questionQueue = [];
 let triviaQuestions = [];
 let answerSelectionsElement;
@@ -86,7 +84,20 @@ $(document).ready( () => {
     // Tracking correct vs incorrect answers
     keepScore = () => {
 
+        for (let y = 0; y < answerSelectionsElement.length; y++) {
+            answerSelectionsElement[y].addEventListener('click', (correct = 0, incorrect = 0) => {
+                if(answerSelectionsElement[y].value === triviaQuestions[currentQuestionIndex-1].correct_answer){
+                    console.log(correct);
+                    correct++;
+                } else {
+                    console.log(incorrect);
+                    incorrect++;
+                }
+            })
+        }
     }
+
+    keepScore();
 })
 
 

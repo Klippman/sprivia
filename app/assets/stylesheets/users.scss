@@ -282,6 +282,35 @@ button {
     color: white; 
 }
 
+#user_name {
+    align-items: center;
+    background-color: rgba(0,168,150,0.8);
+    border: 10px double black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px 10px #00ff00 inset;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    text-decoration: underline;
+    width: 800px;
+}
+
+#user_nickname {
+    align-items: center;
+    background-color: rgba(0,168,150,0.8);
+    border: 10px double black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px 10px #00ff00 inset;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    width: 600px;
+}
+
 // Edit page (/users/edit.html.erb)
 
 #edit_user {
