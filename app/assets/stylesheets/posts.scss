@@ -1,7 +1,12 @@
 /* /posts/show.html.erb */
 
 #comment_div{
+    border: 12px ridge lightslategrey;
+    background-color: aquamarine;
+    margin: auto;
     text-align: center;
+    width: 700px;
+    word-wrap: break-word;
 
     h3 {
         font-family: 'Luckiest Guy', cursive;
@@ -12,13 +17,6 @@
         color:#F75C03;
         font-family: 'Luckiest Guy', cursive;
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    }
-
-    p {
-        border: 1px ridge black;
-        margin-top: 5px;
-        margin-right: 15%;
-        margin-left: 15%;
     }
 }
 
@@ -40,6 +38,7 @@
 }
 
 #post_show_div_parent {
+    margin-top: 10px;
     text-align: center;
 
     h3 {

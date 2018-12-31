@@ -1,11 +1,11 @@
 <body id="post_show_body">
     <div id="post_show_div_parent">
-            <div id="post_border_box">
-                <span><h3>Post:</h3> <h4><%= @post.entry %></h4></span>
-                </br>
-                <span><h3>Posted by:</h3> <h4><%= @post.user.name %></h4></span>
-            </div>
-
+        <div id="post_border_box">
+            <span><h3>Post:</h3> <h4><%= @post.entry %></h4></span>
+            </br>
+            <span><h3>Posted by:</h3> <h4><%= @post.user.name %></h4></span>
+        </div>
+        </br>
         <div id="comment_div">
             <% @post.comments.each do |c| %>
             <span><h3>Comment:</h3> <h4><%= c.body %></h4></span>
