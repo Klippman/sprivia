@@ -72,20 +72,25 @@ $(document).ready( () => {
         // Checking for correct/incorrect answer
         const correctScore = document.querySelector('.correct_score')
         const incorrectScore = document.querySelector('.incorrect_score')
+        
         for (let x = 0; x < answerSelectionsElement.length; x++) {
             answerSelectionsElement[x].addEventListener('click', () => {
                 if(answerSelectionsElement[x].value === triviaQuestions[currentQuestionIndex-1].correct_answer){
-                    correct++
+                    correct++;
                     alert("Correct!");
-                    correctScore.textContent = `Correct: ${correct} `
+                    correctScore.textContent = `Correct: ${correct} -`;
                 } else {
-                    incorrect ++
+                    incorrect ++;
                     alert("WRONG! The answer is: " + triviaQuestions[currentQuestionIndex-1].correct_answer );
-                    incorrectScore.textContent = `Incorrect: ${incorrect}`
-
+                    incorrectScore.textContent = `Incorrect: ${incorrect}`;
                 }
                 nextQuestion();
             })
+            // Styling of scoreboard
+            correctScore.style.color = 'blue'
+            correctScore.style.fontWeight = 'bold'
+            incorrectScore.style.color = 'red'
+            incorrectScore.style.fontWeight = 'bold'
         }
         currentQuestionIndex++;
     }
