@@ -54,15 +54,15 @@ $(document).ready( () => {
     }
 
     // Skip to next question
-    document.getElementById('start_game').onclick = nextQuestion;
+    document.querySelector('#start_game').onclick = nextQuestion;
 
     showNextQuestion = () => {
         // Displaying questions to the screen
         $("#flex_container").html("<h2 class='questions'>" +
             triviaQuestions[currentQuestionIndex].question + "</h2>")
 
-        let answers = triviaQuestions[currentQuestionIndex].incorrect_answers
-        let randomIdx = Math.floor(Math.random() * answers.length - 1)
+        const answers = triviaQuestions[currentQuestionIndex].incorrect_answers
+        const randomIdx = Math.floor(Math.random() * answers.length - 1)
 
         answers.splice(randomIdx, 0, triviaQuestions[currentQuestionIndex].correct_answer)
         // Displaying answer selections
@@ -70,36 +70,25 @@ $(document).ready( () => {
             $("#flex_container2").append("<h2> <input type='radio' class='answerSelections' value=\""+answers[i]+"\">" + " " + answers[i] + "</h2>")
         };
         // Checking for correct/incorrect answer
+        const correctScore = document.querySelector('.correct_score')
+        const incorrectScore = document.querySelector('.incorrect_score')
         for (let x = 0; x < answerSelectionsElement.length; x++) {
             answerSelectionsElement[x].addEventListener('click', () => {
                 if(answerSelectionsElement[x].value === triviaQuestions[currentQuestionIndex-1].correct_answer){
+                    correct++
                     alert("Correct!");
+                    correctScore.textContent = `Correct: ${correct} `
                 } else {
+                    incorrect ++
                     alert("WRONG! The answer is: " + triviaQuestions[currentQuestionIndex-1].correct_answer );
+                    incorrectScore.textContent = `Incorrect: ${incorrect}`
+
                 }
                 nextQuestion();
             })
         }
         currentQuestionIndex++;
     }
-
-    // Tracking correct vs incorrect answers
-    keepScore = () => {
-
-        for (let y = 0; y < answerSelectionsElement.length; y++) {
-            answerSelectionsElement[y].addEventListener('click', () => {
-                if(answerSelectionsElement[y].value === triviaQuestions[currentQuestionIndex-1].correct_answer){
-                    console.log('hello');
-                    correct++;
-                } else {
-                    console.log('bye');
-                    incorrect++;
-                }
-            })
-        }
-    }
-
-    keepScore();
 })
 
 
